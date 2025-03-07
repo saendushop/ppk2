@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>GARA SHOP</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <h1>GARA SHOP</h1>
+
+  <div class='card'>
+    <img src='https://img.lazcdn.com/g/p/0010de44eef9053ded27b7f4a1a302d1.jpg_360x360q80.jpg_.webp' alt='Product Image' class='product-img'>
+    <label for='product'>Product</label>
+    <input type='text' id='product' value='Awesome T-shirt' readonly>
+
+    <label for='size'>Size</label>
+    <select id='size'>
+      <option value='S'>Small</option>
+      <option value='M'>Medium</option>
+      <option value='L'>Large</option>
+      <option value='XL'>Extra Large</option>
+    </select>
+
+    <label for='price'>Price</label>
+    <input type='text' id='price' value='Rp.70.000' readonly>
+  </div>
+
+  <div class='card'>
+    <label for='quantity'>Quantity</label>
+    <input type='number' id='quantity' placeholder='Enter quantity'>
+  </div>
+  <div class='card'>
+    <img src='https://www.elfs-shop.com/~img/msm_baju_koko_pendek_4_button_am0-3ca85-3073_8878-t2494_81.webp' alt='Product Image' class='product-img'>
+    <label for='product'>Product</label>
+    <input type='text' id='product' value='Awesome T-shirt' readonly>
+
+    <label for='size'>Size</label>
+    <select id='size'>
+      <option value='S'>Small</option>
+      <option value='M'>Medium</option>
+      <option value='L'>Large</option>
+      <option value='XL'>Extra Large</option>
+    </select>
+
+    <label for='price'>Price</label>
+    <input type='text' id='price' value='Rp.150.000' readonly>
+  </div>
+
+  <div class='card'>
+    <label for='quantity'>Quantity</label>
+    <input type='number' id='quantity' placeholder='Enter quantity'>
+  </div>
+  <div class='card'>
+    <img src='https://img.inews.co.id/media/1200/files/inews_new/2022/05/09/baju_muslim.jpg' alt='Product Image' class='product-img'>
+    <label for='product'>Product</label>
+    <input type='text' id='product' value='Awesome T-shirt' readonly>
+
+    <label for='size'>Size</label>
+    <select id='size'>
+      <option value='S'>Small</option>
+      <option value='M'>Medium</option>
+      <option value='L'>Large</option>
+      <option value='XL'>Extra Large</option>
+    </select>
+
+    <label for='price'>Price</label>
+    <input type='text' id='price' value='Rp.200.000' readonly>
+  </div>
+
+  <div class='card'>
+    <label for='quantity'>Quantity</label>
+    <input type='number' id='quantity' placeholder='Enter quantity'>
+  </div>
+  <div class='card'>
+    <img src='https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//112/MTA-87159685/no_brand_t-shirt_kaos_baju_distro_clothing_lengan_pendek_pria_wanita_dewasa_unisex_keren_bagus_oneck_cotton_commbed_30s_sablon_live_like_a_child_merk_bils_full01_e3k3jpl7.jpg' alt='Product Image' class='product-img'>
+    <label for='product'>Product</label>
+    <input type='text' id='product' value='Awesome T-shirt' readonly>
+
+    <label for='size'>Size</label>
+    <select id='size'>
+      <option value='S'>Small</option>
+      <option value='M'>Medium</option>
+      <option value='L'>Large</option>
+      <option value='XL'>Extra Large</option>
+    </select>
+
+    <label for='price'>Price</label>
+    <input type='text' id='price' value='Rp.100.000' readonly>
+  </div>
+
+  <div class='card'>
+    <label for='quantity'>Quantity</label>
+    <input type='number' id='quantity' placeholder='Enter quantity'>
+  </div>
+  <div class='card'>
+    <img src='https://id-test-11.slatic.net/p/a3e04c6f9f8ad8cdfd57d57c6941831b.jpg' alt='Product Image' class='product-img'>
+    <label for='product'>Product</label>
+    <input type='text' id='product' value='Awesome T-shirt' readonly>
+
+    <label for='size'>Size</label>
+    <select id='size'>
+      <option value='S'>Small</option>
+      <option value='M'>Medium</option>
+      <option value='L'>Large</option>
+      <option value='XL'>Extra Large</option>
+    </select>
+
+    <label for='price'>Price</label>
+    <input type='text' id='price' value='Rp.100.000' readonly>
+  </div>
+
+  <div class='card'>
+    <label for='quantity'>Quantity</label>
+    <input type='number' id='quantity' placeholder='Enter quantity'>
+  </div>
+
+  <div class='card'>
+    <label for='buyerName'>Your Name</label>
+    <input type='text' id='buyerName' placeholder='Enter your name'>
+  </div>
+
+  <button onclick='checkout()'>Checkout via WhatsApp</button>
+
+  <script>
+    function checkout() {
+      var product = document.getElementById('product').value;
+      var size = document.getElementById('size').value;
+      var price = document.getElementById('price').value;
+      var quantity = document.getElementById('quantity').value;
+      var buyerName = document.getElementById('buyerName').value;
+      var message = `Hallo, Saya mau membeli produk anda ${quantity} of ${product} (Size: ${size}) at ${price} each. My name is ${buyerName}.`;
+      var whatsappUrl = `https://wa.me/+6285872054900?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
